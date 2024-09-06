@@ -2,6 +2,7 @@
 
 ## Table of Contents
 - [Introduction](#introduction)
+- [Research Questions](#research-questions)
 - [Dataset](#dataset)
 - [Usage](#usage)
 - [Approach](#approach)
@@ -14,31 +15,42 @@
 
 ## Introduction
 
-This project explores the intersection of religiousness, educational attainment, and economic welfare (Human Development Index - HDI) across five countries: **Norway**, **Australia**, **Saudi Arabia**, **India**, and **Afghanistan**. By analyzing global data from 1990 to 2010, the project investigates how non-religiosity, education levels, and economic welfare correlate across these culturally distinct nations.
+This project investigates the intersection of religiousness, educational attainment, and economic welfare (Human Development Index - HDI) across five countries: **Norway**, **Australia**, **Saudi Arabia**, **India**, and **Afghanistan**. By analyzing global data from 1990 to 2010, this study aims to uncover patterns between non-religiosity, education levels, and economic development, providing insights into how these factors interplay across distinct cultural and economic environments.
 
-For more comprehensive details on the methodology, statistical analysis, and insights, you can refer to the [project paper](Exploring_the_Intersection_of_Religion__Education__and_Economic_Welfare__A_Global_Analysis.pdf) written for my class.
+For a more detailed breakdown of the methodology, statistical models, and findings, please refer to the [project paper](Exploring_the_Intersection_of_Religion__Education__and_Economic_Welfare__A_Global_Analysis.pdf) written for the class project.
+
+## Research Questions
+
+This study is driven by the following research questions:
+
+1. **How does non-religiosity relate to educational attainment and HDI in countries with varying levels of religious adherence?**
+2. **What is the correlation between levels of education and economic welfare in secular and religious societies?**
+3. **How do the interactions between religious adherence, education, and economic development differ across regions like Europe, the Middle East, and South Asia?**
+
+These research questions aim to explore the complex relationships between religion, education, and economic welfare, with a specific focus on whether secularism is a factor in boosting educational and economic outcomes.
 
 ## Dataset
 
-The dataset comprises key socio-economic indicators over a 20-year period for five countries, exploring the links between:
+The dataset comprises global data on religious adherence, educational attainment, and HDI across five countries from 1990 to 2010. Key variables include:
 
 - **Religiousness**: Levels of religious adherence in each country.
-- **Educational Attainment**: Percentage of the population with varying levels of education.
-- **Economic Welfare (HDI)**: A composite measure including life expectancy, education, and per capita income indicators.
+- **Educational Attainment**: The percentage of the population that has achieved various levels of education.
+- **Economic Welfare (HDI)**: A composite measure that includes life expectancy, education, and per capita income indicators.
 
 ### Key Features
 
 - **Countries**: Norway, Australia, Saudi Arabia, India, Afghanistan
-- **Time Period**: 1990 to 2010
+- **Time Period**: 1990–2010
 - **Variables**:
-  - Religiousness: Religious adherence levels.
-  - Educational Attainment: Percent of the population with various education levels.
-  - HDI: A composite index of human development.
+  - Religious adherence
+  - Educational attainment
+  - HDI (Human Development Index)
 
 ### Data Sources
 
+The dataset was sourced from multiple global data repositories, including:
 - **UN Data**: The United Nations Development Program (UNDP) and various global reports.
-- **World Bank**: Economic and social indicators, including GDP and literacy rates.
+- **World Bank**: Key economic and social indicators, including GDP and literacy rates.
 
 ## Usage
 
@@ -63,42 +75,37 @@ The dataset comprises key socio-economic indicators over a 20-year period for fi
 
 ## Approach
 
-The project follows a structured methodology to analyze the relationships between the variables:
+The study employs various statistical techniques to explore the relationships between religiousness, educational attainment, and economic welfare:
 
 ### Data Preprocessing
 
-The data was cleaned to handle missing values and discrepancies across countries and years. The dataset was scaled to standardize variables and make them suitable for correlation and regression analysis. Outliers were identified and addressed to ensure accurate model performance.
+The dataset was cleaned and standardized to account for missing values, inconsistent measurements across countries, and outliers. Standardization ensures that the various scales of data (e.g., education percentages, HDI scores) are suitable for further statistical analysis.
 
 ### Dimension Reduction
 
-**Principal Component Analysis (PCA)** was used to reduce the dimensionality of the dataset, allowing the most important features to be retained while removing redundancy. This technique was especially useful for high-dimensional data, improving computational efficiency and interpretability.
+To handle the complexity of the dataset and reduce redundancy, **Principal Component Analysis (PCA)** was used to reduce the number of dimensions. This allowed for capturing the most critical aspects of the dataset while improving the efficiency and interpretability of the analysis.
 
 ### Correlation Analysis
 
-Correlation coefficients were calculated to explore the relationships between non-religiosity, educational attainment, and HDI. The analysis revealed significant patterns:
-
-- Countries like **Norway** and **Australia** exhibit strong positive correlations between education and HDI, with low levels of religious adherence.
-- **Saudi Arabia**, **India**, and **Afghanistan** showed more complex relationships, where religious adherence played a varying role in the socio-economic outcomes.
+**Pearson correlation coefficients** were computed to determine the strength of relationships between variables such as non-religiosity, education, and HDI. This analysis revealed strong positive correlations between educational attainment and HDI in countries like **Norway** and **Australia**, where religious adherence was relatively low. Meanwhile, countries like **Saudi Arabia**, **India**, and **Afghanistan** exhibited more complex interactions between religious adherence and economic outcomes.
 
 ### Regression Models
 
-**Multiple Linear Regression** models were built to predict HDI based on educational attainment and religious adherence. The models highlighted how these factors interacted differently across countries:
+The study also uses **Multiple Linear Regression** models to predict HDI based on religious adherence and educational attainment. The regression models provided insights into how these variables interact to influence a country's economic welfare. For instance:
 
-- In **secular countries** like Norway, educational attainment had a stronger impact on HDI.
-- In **religiously inclined countries**, such as Afghanistan, religious adherence influenced both educational attainment and HDI, but the effects varied across time and regions.
+- **Secular countries** like Norway showed a stronger positive impact of education on HDI, with religiousness having minimal influence.
+- **Religious countries**, such as Afghanistan and Saudi Arabia, revealed that religious adherence sometimes acted as a limiting factor in improving educational attainment and HDI.
 
 ## Results
 
-The analysis uncovered several important findings regarding the relationship between education, religion, and economic welfare:
+The study yielded several significant findings:
 
-- **Norway and Australia**: These countries exhibit a strong positive correlation between higher educational attainment and higher HDI, with low levels of religious adherence.
-- **Saudi Arabia**: Education is a key driver of HDI, but religiousness plays a complex role in societal outcomes.
-- **India and Afghanistan**: Higher levels of religiousness often correlate with lower educational attainment and lower HDI, but the relationships are nuanced and depend on other socio-political factors.
+- **Norway and Australia**: Secularism appears to promote educational attainment, which in turn boosts HDI.
+- **Saudi Arabia**: While education is a key driver of HDI, the role of religiousness in shaping socio-economic outcomes is more nuanced and context-dependent.
+- **India and Afghanistan**: In these countries, higher levels of religious adherence were generally associated with lower educational attainment and lower HDI, though the relationship is influenced by other socio-political factors.
 
-The results indicate that while education tends to drive economic welfare, religious adherence can either complement or conflict with educational attainment depending on the cultural and socio-political context.
+These findings suggest that while education is universally associated with higher economic welfare, the role of religious adherence varies significantly across different socio-cultural contexts.
 
 ## Conclusion
 
-This project provides a comparative analysis of five countries, illustrating how different socio-economic, religious, and educational dynamics shape human development. The study shows that educational attainment is a consistent driver of HDI, but religious adherence plays a more variable role, depending on the country and cultural context.
-
-For a detailed explanation of the methods, statistical models, and in-depth insights, please refer to the [project paper](Exploring_the_Intersection_of_Religion__Education__and_Economic_Welfare__A_Global_Analysis.pdf).
+This project demonstrates that educational attainment consistently correlates with higher economic welfare, as measured by HDI, but religious adherence can either complement or complicate this relationship depending on the country's cultural and socio-political context. Secular nations tend to benefit more from education in terms of HDI growth, whereas religious nations show more complex patterns.
